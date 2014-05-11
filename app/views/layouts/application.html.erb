@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title><%= full_title(yield(:title)) %></title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	  <%= render 'layouts/shim' %>
 
-<%= yield %>
+	</head>
+	<body>
+		<header class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<%= link_to "基友团", root_path, id:"logo" %>
+					<nav>
+						<ul class="nav pull-right">
+							<li><%= link_to "主页", root_path %></li>
+							<li><%= link_to "成员",    '#' %></li>
+							<li><%= link_to "把妹技巧",    '#' %></li>
+							<li><%= link_to "Sign in", '#' %></li>	
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="conainter">
+			<%= yield %>
+		</div>
+	</body>
 
-</body>
+	<footer class="footer">
+  		<small>
+    		<a href="https://www.facebook.com/johnjohnshen">Facebook</a>
+    			- john john production
+  		</small>
+  		<nav>
+   			<ul>
+      			<li><%= link_to "About", about_path %></li>
+     			<li><%= link_to "Contact", contact_path %></li>
+				<li><%= link_to "Help",    help_path %></li>
+      			<li><a href="http://news.railstutorial.org/">Blog</a></li>
+    		</ul>
+ 	     </nav>
+	</footer>
 </html>

@@ -1,15 +1,22 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, '主页') %>
 <!DOCTYPE html>
 <html>
   <head>
   </head>
   
   <body>
-    <h1>Sample App</h1>
-    <p>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </p>
+    <div class="center hero-unit">
+
+      <h1>Welcome to 基友团</h1>
+
+      <h2>圣地亚哥 最大的基佬社团</h2>
+
+      <%= link_to "Register Now!", '#', class: "btn btn-large btn-primary" %>
+    </div>
+
+  <%= link_to image_tag("1.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
+
+  <%= link_to image_tag("2.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
+
   </body>
 </html>
