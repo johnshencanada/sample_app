@@ -29,6 +29,20 @@ describe "Static pages" do
     end
 	end
 
+  describe "Member page" do
+
+    it "shoud have the content '成员'" do
+      visit member_path
+      expect(page).to have_content('成员')
+    end
+
+    it "shoud have the title 'Help'" do
+      visit member_path
+      expect(page).to have_title("#{base_title} | 成员")
+    end
+  end
+
+  
 	describe "About page" do
 
     it "should have the content 'About Us'" do

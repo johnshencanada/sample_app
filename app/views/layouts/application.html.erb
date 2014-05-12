@@ -9,38 +9,12 @@
 
 	</head>
 	<body>
-		<header class="navbar navbar-fixed-top navbar-inverse">
-			<div class="navbar-inner">
-				<div class="container">
-					<%= link_to "基友团", root_path, id:"logo" %>
-					<nav>
-						<ul class="nav pull-right">
-							<li><%= link_to "主页", root_path %></li>
-							<li><%= link_to "成员",    '#' %></li>
-							<li><%= link_to "把妹技巧",    '#' %></li>
-							<li><%= link_to "Sign in", '#' %></li>	
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+	<%= render 'layouts/header' %>
 		<div class="conainter">
 			<%= yield %>
 		</div>
-	</body>
+	<%= render 'layouts/footer' %>
 
-	<footer class="footer">
-  		<small>
-    		<a href="https://www.facebook.com/johnjohnshen">Facebook</a>
-    			- john john production
-  		</small>
-  		<nav>
-   			<ul>
-      			<li><%= link_to "About", about_path %></li>
-     			<li><%= link_to "Contact", contact_path %></li>
-				<li><%= link_to "Help",    help_path %></li>
-      			<li><a href="https://www.facebook.com/groups/304032819661649/">Group</a></li>
-    		</ul>
- 	     </nav>
-	</footer>
+
+
 </html>
