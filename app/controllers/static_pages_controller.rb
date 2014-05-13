@@ -13,5 +13,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def allen
+  end
   
 end
