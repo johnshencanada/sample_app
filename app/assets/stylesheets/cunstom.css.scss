@@ -1,6 +1,10 @@
 @import "bootstrap";
 
 /* header */
+header {
+  width:100%;
+  margin:0 auto;
+}
 
 #logo {
   float: left;
@@ -13,7 +17,7 @@
   font-weight: bold;
   line-height: 1;
   &:hover {
- 	color: #fff;
+ 	color: #ddd;
   	text-decoration: none;
   }
 }
@@ -71,6 +75,7 @@ textarea {
 
 /* footer */
 footer {
+  clear: both; 
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;

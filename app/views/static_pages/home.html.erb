@@ -6,17 +6,23 @@
   
   <body>
     <div class="center hero-unit">
-
       <h1>Welcome to 基友团</h1>
-
       <h2>圣地亚哥 最大的基佬社团</h2>
-
       <%= link_to "Register Now!", '#', class: "btn btn-large btn-primary" %>
     </div>
-
-  <%= link_to image_tag("1.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
-
-  <%= link_to image_tag("2.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
+    <div id ="gallery">
+      <ul>
+        <li>
+          <%= link_to image_tag("1.jpg", alt: "Rails"), '1.jpg' %>
+        </li>
+        <li>
+          <%= link_to image_tag("2.jpg", alt: "Rails"), '2.jpg' %>
+        </li>
+        <li>
+          <%= link_to image_tag("3.jpg", alt: "Rails"), '3.jpg' %>
+        </li>
+      </ul>
+    </div>
 
   </body>
 </html>

@@ -1,11 +1,14 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
   root 'static_pages#home'
-  match '/', to: 'static_pages#home', via:'get'
-  match '/member', to: 'static_pages#member', via:'get'
-  match '/help', to: 'static_pages#help', via:'get'
-  match '/about', to: 'static_pages#about', via:'get'
+  match '/', to: 'static_pages#home',           via:'get'
+
+  match '/signup', to: 'users#new',             via:'get'
+  match '/member', to: 'static_pages#member',   via:'get'
+  match '/help', to: 'static_pages#help',       via:'get'
+  match '/about', to: 'static_pages#about',     via:'get'
   match '/contact', to: 'static_pages#contact', via:'get'
-  match '/allen', to: 'static_pages#allen', via:'get'
+  match '/allen', to: 'static_pages#allen',     via:'get'
 
 
 

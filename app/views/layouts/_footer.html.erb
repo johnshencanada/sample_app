@@ -1,14 +1,21 @@
 	<footer class="footer">
   		<small>
-    		<a href="https://www.facebook.com/johnjohnshen">JohnJohnshen production</a> - all rights reserved
+    		<a href="https://www.facebook.com/johnjohnshen">&copy;JohnJohnshen </a> - all rights reserved
     			
   		</small>
   		<nav>
    			<ul>
-      			<li><%= link_to "About", about_path %></li>
+          <li>
+          <%= link_to image_tag("facebook-wrap.png", alt: "Rails"),
+          'https://www.facebook.com/groups/304032819661649/' %>
+          </li>
+          <li>
+          <%= link_to image_tag("twitter-wrap.png", alt: "Rails"),
+          'https://www.facebook.com/groups/304032819661649/' %>
+          </li>
+      		<li><%= link_to "About", about_path %></li>
      			<li><%= link_to "Contact", contact_path %></li>
-				<li><%= link_to "Help",    help_path %></li>
-      			<li><a href="https://www.facebook.com/groups/304032819661649/">Group</a></li>
+				  <li><%= link_to "Help",    help_path %></li>
     		</ul>
  	     </nav>
 	</footer>
